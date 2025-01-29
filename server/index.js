@@ -5,7 +5,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
-const PORT=8080;
+const PORT=process.env.PORT || 4000;
 
 
 require("./utils/database").databaseConnection();
