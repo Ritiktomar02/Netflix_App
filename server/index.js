@@ -12,11 +12,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-const corsOptions = {
-    origin: "*",
-    credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(
+    cors({
+        origin: [
+			"http://localhost:3000",
+			"https://studynotion-frontend-eight-sigma.vercel.app",
+		],
+        credentials: true,
+    })
+);
 
 // Define a route for the root path
 app.get("/", (req, res) => {
