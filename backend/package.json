@@ -2,12 +2,11 @@
   "name": "netflix",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+ 
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/index.js",
-    "build":"npm install && npm install --prefix netflix && npm run build --prefix netflix",
-    "start": "nodemon backend/index.js"
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",

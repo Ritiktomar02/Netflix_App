@@ -1,8 +1,8 @@
-import { User } from "../models/userModel.js";
-import bcryptjs from "bcryptjs";
-import jwt from "jsonwebtoken";
+const User = require("../models/userModel");
+const bcryptjs = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
-export const Login = async(req,res)=>{
+exports.Login = async(req,res)=>{
     try {
         const {email,password} = req.body;
         if(!email || !password){
@@ -42,14 +42,14 @@ export const Login = async(req,res)=>{
     }
 }
 
-export const Logout = async (req,res) => {
+exports.Logout = async (req,res) => {
     return res.status(200).cookie("token", "", {expiresIn:new Date(Date.now()), httpOnly:true}).json({
         message:"User logged out successfully.",
         success:true,
     });
 }
 
-export const Register = async (req,res) =>{
+exports.Register = async (req,res) =>{
     try {
         const {fullName, email, password} = req.body;
         if(!fullName || !email || !password){

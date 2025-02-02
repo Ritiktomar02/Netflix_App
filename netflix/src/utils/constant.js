@@ -1,12 +1,13 @@
-export const API_END_POINT = "https://netflix-app-tj88.onrender.com/api/v1/user";
+export const API_END_POINT = "http://localhost:8080/api/v1/user";
 
 export const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZGJlZjViMDUzNWE3OGYwMjllMTQ0NDE5NTQ4MjM4MCIsInN1YiI6IjY1MDRhMjNkNTllOGE5MDExZWNhYTVjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LTBaAb_2NPRGPr2HeGszyFDP-onLh-fiL7fzmnOFZUg'
-    }
-  };
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOTA2MTYyNWU2Y2RlODQ5ZDgzNzg2YjU2NDUwNzBkZSIsIm5iZiI6MTczODA0NTI3My4wMzcsInN1YiI6IjY3OTg3NzU5ZGY0YjAxOTFjZTJiMjZhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0iQQG8pbWIdpfrJow98TKm9aqg8TR0g2DTUVelVWYx4'
+  }
+};
+
 export const Now_Playing_Movie = "https://api.themoviedb.org/3/movie/now_playing";
 export const Popular_Movie = "https://api.themoviedb.org/3/movie/popular";
 export const Top_Rated_Movie = "https://api.themoviedb.org/3/movie/top_rated";

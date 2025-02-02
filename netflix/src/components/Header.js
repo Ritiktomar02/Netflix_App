@@ -8,6 +8,8 @@ import {useNavigate} from "react-router-dom";
 import toast from "react-hot-toast";
 import { setToggle } from '../redux/movieSlice';
 
+console.log(API_END_POINT)
+
 const Header = () => { 
     const user = useSelector((store)=>store.app.user);
     const toggle = useSelector(store=>store.movie.toggle);
