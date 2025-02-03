@@ -1,18 +1,23 @@
 export const API_END_POINT = "http://localhost:8080/api/v1/user";
+export const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+export const API_ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
+
+console.log(API_KEY, API_ACCESS_TOKEN, process.env.REACT_APP_TMDB_IMG_URL);
 
 export const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOTA2MTYyNWU2Y2RlODQ5ZDgzNzg2YjU2NDUwNzBkZSIsIm5iZiI6MTczODA0NTI3My4wMzcsInN1YiI6IjY3OTg3NzU5ZGY0YjAxOTFjZTJiMjZhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0iQQG8pbWIdpfrJow98TKm9aqg8TR0g2DTUVelVWYx4'
-  }
-};
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_ACCESS_TOKEN}`,
+    }
+  };
 
-export const Now_Playing_Movie = "https://api.themoviedb.org/3/movie/now_playing";
-export const Popular_Movie = "https://api.themoviedb.org/3/movie/popular";
-export const Top_Rated_Movie = "https://api.themoviedb.org/3/movie/top_rated";
-export const Upcoming_Movie = "https://api.themoviedb.org/3/movie/upcoming";
+// TMDB API Endpoints
+export const Now_Playing_Movie = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
+export const Popular_Movie = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+export const Top_Rated_Movie = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`;
+export const Upcoming_Movie = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`;
 
-export const  SEARCH_MOVIE_URL="https://api.themoviedb.org/3/search/movie?query=";
+export const SEARCH_MOVIE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
-export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500";
+export const TMDB_IMG_URL = process.env.REACT_APP_TMDB_IMG_URL;
