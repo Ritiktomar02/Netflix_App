@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://netflix-app-weld.vercel.app',
+    origin:'https://netflix-app-kappa-smoky.vercel.app',
     credentials:true
 }
 app.use(cors(corsOptions));
