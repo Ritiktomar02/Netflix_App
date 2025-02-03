@@ -1,4 +1,4 @@
-export const API_END_POINT = "http://localhost:8080/api/v1/user";
+export const API_END_POINT = "https://netflix-app-1our.onrender.com/api/v1/user";
 export const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 export const API_ACCESS_TOKEN = process.env.REACT_APP_TMDB_ACCESS_TOKEN;
 
